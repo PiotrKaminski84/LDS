@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>435</width>
+    <height>262</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="openSh">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>121</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Open Shutter</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="pwr_ref">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>40</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="pwr_actual">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>90</y>
+      <width>64</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reference Power</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Power</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_reference">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>40</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save reference</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ref_active">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>70</y>
+      <width>191</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>reference measurment</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="led_on">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>130</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LED ON</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>90</width>
+      <height>203</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="open_1">
+       <property name="text">
+        <string>open 1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="open_2">
+       <property name="text">
+        <string>open 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="open_3">
+       <property name="text">
+        <string>open 3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QRadioButton" name="open_4">
+       <property name="text">
+        <string>open 4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QRadioButton" name="open_5">
+       <property name="text">
+        <string>open 5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QRadioButton" name="open_6">
+       <property name="text">
+        <string>open 6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QRadioButton" name="open_7">
+       <property name="text">
+        <string>open 7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QRadioButton" name="open_all">
+       <property name="text">
+        <string>open all</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QRadioButton" name="close_all">
+       <property name="text">
+        <string>close all</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>openSh</zorder>
+   <zorder>open_1</zorder>
+   <zorder>open_2</zorder>
+   <zorder>open_3</zorder>
+   <zorder>open_4</zorder>
+   <zorder>open_5</zorder>
+   <zorder>open_6</zorder>
+   <zorder>open_7</zorder>
+   <zorder>open_all</zorder>
+   <zorder>close_all</zorder>
+   <zorder>pwr_ref</zorder>
+   <zorder>pwr_actual</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>save_reference</zorder>
+   <zorder>ref_active</zorder>
+   <zorder>led_on</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

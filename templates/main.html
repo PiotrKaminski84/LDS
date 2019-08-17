@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+        <!--script type="text/javascript" src=="{{ url_for('static', filename='main.js') }}"></script--> 
+        
+        </script>
+    </head>
+    <Body>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+        <div>            
+            <a href="/open_menu" target="disp"><button>open shutter</button></a>
+            <a href="/ref" target="disp"><button>get reference</button></a> 
+            <a href="/losses" target="disp"><button>get changes</button></a>                
+        </div>
+        <div>
+            <iframe name="disp" width=700 height=700></iframe>
+        </div>
+    </Body>
+</html>
