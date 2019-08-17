@@ -13,7 +13,7 @@ import threading
 class MotorController():
     #store open/close pos = pickle
     def __init__(self):        
-        self.ser=serial.Serial("/dev/ttyUSB1",9600,timeout=100)
+        self.ser=serial.Serial("/dev/ttyACM0",9600,timeout=100)
         
     def set_close_pos(self,close_pos):
         self.send_ser("SC{}".format(close_pos))
