@@ -14,7 +14,7 @@ class MotorController():
     #store open/close pos = pickle
     def __init__(self):
         
-        self.ser=serial.Serial("COM4",9600)
+        self.ser=serial.Serial("/dev/ttyACM0",9600)
         self.start_serial_monitoring()
         self.new_message=1
         self.message=list()

@@ -16,7 +16,7 @@ from flask import Flask
 from flask import request
 from flask import send_file
 from flask import render_template
-from motor_controller_arduino import MotorController
+from motor_controller_mthread import MotorController
 from p_meter_ctrl import PowerMeterCtrl
 
 app = Flask(__name__)
