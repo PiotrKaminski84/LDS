@@ -56,4 +56,4 @@ def get_ref():
 #    return render_template("change.html",res=r)
 
 if __name__=='__main__':
-    app.run()
+    app.run(host = "0.0.0.0")
