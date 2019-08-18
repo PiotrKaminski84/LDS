@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from main_app import Ui_MainWindow
 import sys
-from motor_controller_arduino_mthread import MotorController #arduino_mthread
+from motor_controller_arduino_mthread2 import MotorController #arduino_mthread
 import pickle
 
 class runner():

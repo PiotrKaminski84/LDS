@@ -14,8 +14,8 @@ class MotorController():
     #store open/close pos = pickle
     def __init__(self):
         self.connected=False
-        try:
-            self.ser=serial.Serial("/dev/ttyACM0",9600)                    
+        try: 
+            self.ser=serial.Serial("COM4",9600) # /dev/ttyACM0
             self.connected=True
         except:
             self.connected=False 
@@ -78,7 +78,7 @@ class MotorController():
         r=''
         i=1
         while True:
-            time.sleep(0.2)
+           # time.sleep(0.2)
             if self.new_message!=1:
                 r=self.read_ser()
                 i+=1                
