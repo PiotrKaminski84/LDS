@@ -6,6 +6,7 @@ Created on Tue Jun 11 08:21:58 2019
 """
 
 import time
+import random
 
 
 
@@ -50,6 +51,9 @@ class MotorController():
         
     def ack(self):
         self.writeRegister(37,0)
+        
+    def get_pwr(self):
+        return random.randrange(0,99)+float(random.randrange(0,100))/100
         
 if __name__=="__main__":
     mc=MotorController()

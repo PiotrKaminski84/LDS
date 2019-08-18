@@ -13,8 +13,13 @@ import threading
 class MotorController():
     #store open/close pos = pickle
     def __init__(self):
-        
-        self.ser=serial.Serial("/dev/ttyACM0",9600)
+        self.connected=False
+        try:
+            self.ser=serial.Serial("/dev/ttyACM0",9600)                    
+            self.connected=True
+        except:
+            self.connected=False 
+            print('no serial connection')
         self.start_serial_monitoring()
         self.new_message=1
         self.message=list()
@@ -45,14 +50,15 @@ class MotorController():
             self.send_ser("OP{}".format(to_open-1))      
 
     def send_ser(self,cm):
-        
-        self.ser.write(cm.encode())
+        if self.connected:
+            self.ser.write(cm.encode())
         
     def read_ser(self):
        # time.sleep(1)
-        ret=self.ser.readline()
-        #ret+=self.ser.read_all()
-        return ret
+       if self.connected:
+           ret=self.ser.readline()
+           return ret
+       return 'ref pwr not connected'
     
     def get_pwr(self):
         self.send_ser("MS")
@@ -64,7 +70,7 @@ class MotorController():
                 if len(msg)>3:
                     if msg[0:3]=='ref':
                         read=True
-                        return(msg)
+                        return(msg[7:])
                 self.new_message=0
         return '' 
     
